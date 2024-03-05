@@ -1,9 +1,11 @@
 // -----------------variaveis --------------------
 const inputs = document.querySelectorAll('.input');
 const btnGerar = document.querySelector('#text-create-password span')
-
+const divSenha = document.querySelector('#container-create-senha')
+const pSenha = document.querySelector('#senha-gerada')
 
 //--------------------funções--------------------------
+
 const generateCapitalLetters = () => {
     const letra = String.fromCharCode(Math.floor(Math.random() * 26) + 65)
     return letra
@@ -32,7 +34,7 @@ const createPassword = () => {
         const caractere = listaDeFunction[randomIndice]()
         arrayPassword.push(caractere)
     }
-    console.log(arrayPassword.join(''))
+    return arrayPassword.join('')
 }
 
 inputs.forEach(input => {
@@ -52,5 +54,7 @@ inputs.forEach(input => {
 
 //----------------------eventos--------------
 btnGerar.addEventListener('click', () => {
- createPassword()
-})
+    const senha = createPassword()
+    pSenha.textContent = senha
+    divSenha.classList.remove('hide')
+}) 
