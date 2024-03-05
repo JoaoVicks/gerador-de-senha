@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gerador de senha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@1,500&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron&family=Poppins:wght@200;300;400;700;800&family=Quicksand&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
+        
         <div class="container-img">
-            <h3>Seja</h3>
-            <h3>Bem-vindo</h3>
+            <div id="container-title">
+                <h3>Seja</h3>
+                <h3>Bem-vindo</h3>
+            </div>
         </div>
+        
         <form >
-            <h3>Crie sua conta</h3>
-            <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
+            <div class="container-title2">
+                <h3>Crie sua conta</h3>
+                <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
+            </div>
+            
             <div class="container-input">
                 <label for="inome">Nome</label>
-                <input type="text" id="inome">
+                <input class="input" type="text" id="inome">
             </div>
             <div class="container-input">
-                <label for="iemial">E-mail</label>
-                <input type="text" id="inome">
+                <label for="iemail">E-mail</label>
+                <input  class="input" type="email" id="iemail">
             </div>
             <div class="container-input">
                 <label for="isenha">Senha</label>
-                <input type="text" id="inome">
+                <input class="input" type="password" id="isenha">
+                <p id="text-create-password">Quer ajuda para criar uma senha? <span>Clique aqui.</span></p>
+                
+                <div id="container-create-senha" class="hide">
+                    
+                    <p>Aqui está sua nova senha</p>
+                    <h4 id="senha-gerada">aakakakak</h4>
+                
+                </div>
             </div>
             <div class="container-input">
                 <label for="iConfirmacao">Confirmação de senha</label>
-                <input type="text" id="inome">
+                <input class="input" type="password" id="iConfirmacao">
             </div>
-            <input type="submit" value="Cadastrar">
+            
+            <input id="btn" type="submit" value="Cadastrar">
         </form>
     </div>
     

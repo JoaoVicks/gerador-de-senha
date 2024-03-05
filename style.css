@@ -1,27 +1,36 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
+*::selection{
+    background-color: #16be9a;
+    color:white;
+}
+.hide{
+    display: none;
+}
 body{
-    background:linear-gradient(rgba(7, 248, 83, 0.773),rgb(245, 156, 3));
+    background:linear-gradient(#07f853c5,#092a45);
     background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     display: flex;
-    
     align-items: center;
-    font-family: ;
+    justify-content: center;
+    font-family:'Montserrat' ;
+    background-repeat: no-repeat;
 }
 .container{
     display: flex;
     max-width: 1200px;
     width: 100%;
-    border: 1px solid red;
-    height: 650px;
+    max-height:750px ;
+    box-shadow: 5px 10px 50px rgba(51, 51, 51, 0.753) ;
     background-repeat: no-repeat;
+    
     
 }
 .container-img{
@@ -29,15 +38,121 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    max-width: 600px;
+    max-width: 50%;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 3rem;
+    padding: 2rem;
+    position: relative;
+    
+}
+.container-img::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top, #092a45af 3%,#08223839);
+    z-index: 1;
+    
 }
 .container-img h3{
 color:white;
 font-size: 5rem;
+position: relative;
+z-index: 2;
+}
+form{
+    background-color: #fff;
+    flex:1;
+    text-align: center;
+    padding: 1.4rem 2rem 1.4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+form h3{
+    font-size: 2.7rem;
+    color:#092a45;
+    margin-bottom:1rem;
+    font-weight: 500;
+}
+form p{
+color: #092a45;
+font-size: 17px;
+font-weight: 100;
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+}
+
+.container-input label{
+margin-left:2rem;
+
+position: absolute;
+transition: 0.5s;
+}
+.anima-label{
+    margin: -1.3rem 0 0 0 !important;
+    color: #16be9a;
+    
+}
+.anima-input{
+    border-bottom: #16be9a;
+}
+
+.input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 0.5rem 0.7rem;
+    outline: none;
+    height: 40px;
+    width: 450px;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+#text-create-password{
+margin-top: 0.9rem;
+}
+#text-create-password span{
+font-weight: bold;
+cursor: pointer;
+
+}
+#text-create-password span:hover{
+color: #16be9a;
+
+}
+
+#container-create-senha{
+    border: 1px solid #092a45;
+    padding: 0.5rem;
+    margin-top:1rem ;
+}
+#container-create-senha p{
+   color: #07f853c5;
+   font-weight: bold;
+}
+#senha-gerada{
+    font-size: 25px;
+    margin-top: 0.7rem;
+}
+
+#btn{
+    max-width: 200px;
+    width: 100%;
+    background-color: #05b83dc5;
+    border: none;
+    padding:1rem 2rem;
+    font-size: 24px;
+    color: #fff;
 }
