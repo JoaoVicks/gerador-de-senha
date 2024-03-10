@@ -27,27 +27,65 @@
             </div>
             
             <div class="container-input">
-                <label for="inome">Nome</label>
-                <input class="input" type="text" id="inome">
+                <label class="label-container-input"  for="inome">Nome</label>
+                <input  class="input" type="text" id="inome">
             </div>
             <div class="container-input">
-                <label for="iemail">E-mail</label>
+                <label class="label-container-input"  for="iemail">E-mail</label>
                 <input  class="input" type="email" id="iemail">
             </div>
             <div class="container-input">
-                <label for="isenha">Senha</label>
+                <label class="label-container-input"  for="isenha">Senha</label>
                 <input class="input" type="password" id="isenha">
-                <p id="text-create-password">Quer ajuda para criar uma senha? <span>Clique aqui.</span></p>
                 
-                <div id="container-create-senha" class="hide">
-                    
-                    <p>Aqui está sua nova senha</p>
-                    <h4 id="senha-gerada"></h4>
-                
-                </div>
             </div>
+                <div class="container-create">
+                    <p id="text-create-password">Quer ajuda para criar uma senha? <span>Clique aqui.</span></p>
+                    
+                    <div id="container-custom-password"  class="hide">
+                    
+                        <p class="text-container-custom">Customize sua senha que será gerada.</p>
+                        <div class="div-input">
+                    
+                            <label for="iQuantidade">Digite a quantidade de caracteres:</label>
+                    
+                            <input id="iQuantidade" type="number" value="10">
+                    
+                        </div>
+                        <div class="div-input2">
+                    
+                            <label class="label-checkbox" for="iLetras">Letras</label>
+                    
+                            <input class="checkbox-create" id="iLetras" type="checkbox" >
+                    
+                        </div>
+                        <div class="div-input2">
+                    
+                            <label  class="label-checkbox" for="iNumber">Números</label>
+                    
+                            <input class="checkbox-create" id="iNumber" type="checkbox" >
+                    
+                        </div>
+                        <div class="div-input2">
+                    
+                            <label class="label-checkbox" for="iSimbolos">Simbolos</label>
+                    
+                            <input  class="checkbox-create" id="iSimbolos" type="checkbox">
+                    
+                        </div>
+                        <button class="btn-create">Criar senha</button>
+                    </div>
+                    
+                    <div id="container-create-senha" class="hide">
+                        <p>Aqui está sua nova senha</p>
+                        <h4 id="senha-gerada"></h4>
+                        <button id="copy-password">Copiar senha</button>
+                    </div>
+                </div>
+
+            
             <div class="container-input">
-                <label for="iConfirmacao">Confirmação de senha</label>
+                <label class="label-container-input" for="iConfirmacao">Confirmação de senha</label>
                 <input class="input" type="password" id="iConfirmacao">
             </div>
             
